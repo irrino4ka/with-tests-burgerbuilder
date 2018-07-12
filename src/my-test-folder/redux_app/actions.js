@@ -1,10 +1,11 @@
-const uid = () => Math.random().toString(34).slice(2);
+//export const uid = () => Math.random().toString(34).slice(2);
+export const uid = (text) => text + text.length +1;
 
-export function addTodo(text) {
+export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
     payload: {
-      id: uid(),
+      id: uid(text),
       isDone: false,
       isBold: false,
       text: text
@@ -12,14 +13,14 @@ export function addTodo(text) {
   };
 }
 
-export function toggleTodo(id) {
+export const toggleTodo= (id) => {
   return {
     type: 'TOGGLE_TODO',
     payload: id
   };
 }
 
-export function boldTodo(id) {
+export const boldTodo = (id) => {
   return {
     type: 'BOLD_TODO',
     payload: id

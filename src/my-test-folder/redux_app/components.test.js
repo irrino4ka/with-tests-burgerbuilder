@@ -20,7 +20,7 @@ describe('test TodoCase', () => {
         expect(wrapper.props().todo).not.toBe('isDone');
     });
 
-    it('should have 1 property', () => {
+    it('should have been defined', () => {
         expect(wrapper.props()).toBeDefined();
     })
 })

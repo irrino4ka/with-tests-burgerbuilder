@@ -12,7 +12,7 @@ export default function reducer(todos=init, action) {
       return todos.map(t => {
         if(t.get('id') === action.payload) {
           console.log(t, 'toggle');
-          return t.update('isDone', isDone => !isDone);
+         return t.update('isDone', isDone => !isDone);
         } else {
           return t;
         }

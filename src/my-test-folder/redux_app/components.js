@@ -39,9 +39,10 @@ export function TodoList(props) {
 
   const onSubmit = (event) => {
     event.preventDefault()
+
     console.log('submit', event);
     console.log(event.target.querySelector('input').value);
-    // const input = event.target;
+    
     const text = event.target.querySelector('input').value;
     const isLongEnough = text.length > 0;
     if (isLongEnough) {
